@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/header2.ejs')%>
+<body>
+    
+    <%-include('./partials/nav.ejs')%>
+    <div class="dash-container">
+        <div class="dashseb">
+          <div class="inname">Total Students</div>
+          <div class="invalue"><%= totalstd %></div>
+        </div>
+    
+        <div class="dashseb">
+          <div class="inname">Total Subjects</div>
+          <div class="invalue"><%= totaltr_sub %></div>
+        </div>
+    
+        <div class="dashseb">
+          <div class="inname">Total Teachers</div>
+          <div class="invalue"><%= totaltr_sub %></div>
+        </div>
+    
+        <div class="dashseb">
+          <div class="inname">Total Revenue</div>
+          <div class="invalue">$<%=totalrevenue[0].total %></div>
+        </div>
+      </div>
+    <%-include('./partials/footer.ejs')%>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/header2.ejs')%>
+<body>
+    
+    <%-include('./partials/nav.ejs')%>
+   
+        <h1>UPDATE STUDENT INFO</h1>
+      
+        
+      <form action="/updateUser" method="post" onsubmit="return validateForm()">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" value="<%= user.id %>" required readonly>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= user.name %>" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" value="<%= user.age %>" required>
+      
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="" disabled>Select Status</option>
+            <option value="Active" <%= user.status === 'Active' ? 'selected' : '' %>>Active</option>
+            <option value="Inactive" <%= user.status === 'Inactive' ? 'selected' : '' %>>Inactive</option>
+            <option value="Onhold" <%= user.status === 'Onhold' ? 'selected' : '' %>>Onhold</option>
+        </select>
+      
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="" disabled>Select Subject</option>
+            <option value="Internet of Things (IoT)" <%= user.subject === '1' ? 'selected' : '' %>>Internet of Things (IoT)</option>
+            <option value="Convolutional Neural Network (CNN)" <%= user.subject === '2' ? 'selected' : '' %>>Convolutional Neural Network (CNN)</option>
+            <option value="Scholastic Aptitude Test (SAT)" <%= user.subject === '3' ? 'selected' : '' %>>Scholastic Aptitude Test (SAT)</option>
+        </select>
+        <br>
+        <button type="submit">Update User</button>
+      </form>
+
+      <script>
+        document.getElementById('startdate').valueAsDate = new Date();
+  
+        function validateForm() {
+            console.log(",,,,,,,,,,,,,,,,,,");
+            const nameInp = document.getElementById('name');
+            const valname = /^[a-zA-Z ]+$/;
+            console.log("//////////////////");
+            console.log(nameInp);
+            if (!valname.test(nameInp.value)) {
+               
+                alert('Please enter a valid name with only letter characters.');
+                return false; 
+            }
+
+            const ages = document.getElementById('age');
+            const age = parseInt(ages.value);
+
+            if (isNaN(age) || age < 13 || age > 56) {
+                alert('Please enter a valid age between 13 and 56.');
+                return false;
+            }
+            return true; 
+        }
+
+      </script>
+      
+      <%-include('./partials/footer.ejs')%>
+      
+</body>
+</html>

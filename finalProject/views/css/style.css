@@ -1,0 +1,327 @@
+body {
+  /* font-family: 'noto sans, Helvetica, Arial, sans-serif'; */
+    /* font-family: 'Noto Sans',Arial, sans-serif; */
+    font-family: 'Noto Sans', sans-serif;
+    margin: 50px 80px 10px 80px;
+    /* margin-right: 80px;
+    margin-left: 80px; */
+    background-color: var(--main);
+    
+}
+
+:root {
+  --main: #202325;
+  --mn: #3c4551;
+  --white: #ffffff;
+  --yellow:#FFF59D;
+
+}
+
+h1 {
+    color: #ffffff;
+    margin-top: 3%;
+    margin-left: 350px;
+}
+
+form {
+    margin-bottom: 20px;
+    margin: 50px 80px 10px 350px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+form input , select {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: var(--yellow);
+    color: var(--main);
+    font-weight: bolder;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--mn);
+    color: var(--white);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+}
+
+th {
+    background-color:var(--mn);
+    color: white;
+}
+
+tr:hover {
+    background-color:var(--main);
+}
+
+a {
+  color: var(--yellow);
+    text-decoration: none;
+}
+a .delete{
+  color: red;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* //////////////////////////// */
+
+/* Add this CSS to your stylesheet */
+footer {
+    background-color: var(--mn);
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 10%;
+    margin-bottom: 0%;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    width: 30%;
+    padding: 10px;
+  }
+  
+  .footer-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .footer-section a {
+    display: block;
+    color: #fff;
+    margin-top: 5px;
+    text-decoration: none;
+  }
+  .footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid var(--yellow);
+  }
+  
+
+
+/* ////////////////////////////////////////// */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+body{
+     max-width: 1200px;
+     margin: 20px auto;
+     /* padding: 0 20px; */
+     font-family: 'Noto Serif' serif;
+     
+     
+}
+
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+.container{
+
+/* width: 90%; */
+/* height: 400px; */
+}
+.nav {
+height: 50px;
+width: 100%;
+padding: 0 10px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: var(--mn);
+position: relative;
+border: none;
+border-radius: 10px 10px 0 0;
+}
+
+.nav  .nav-header {
+width: 50%;
+display: inline;
+}
+
+.nav  .nav-header  .nav-title {
+display: inline-block;
+font-size: 22px;
+color: var(--yellow);
+padding: 10px;
+font-weight: bolder;
+}
+
+.nav  .nav-btn {
+display: none;
+}
+
+.nav  .nav-links {
+width: 50%;
+display: inline-flex;
+justify-content: flex-end;
+column-gap: 20px;
+font-size: 18px;
+border: none;
+border-radius: 0 0 10px 10px;
+}
+
+.nav  .nav-links  a {
+display: inline-block;
+padding: 10px 10px;
+text-decoration: none;
+color: var(--white);
+}
+
+.nav  .nav-links  a:hover {
+background-color: rgba(0, 0, 0, 0.129);
+}
+
+.nav  #nav-check {
+display: none;
+}
+
+@media (max-width:600px) {
+.nav  .nav-btn {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.nav  .nav-btn  label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border: none;
+  border-top-right-radius: 10px;
+}
+.nav  .nav-btn  label:hover,.nav  #nav-check:checked ~ .nav-btn  label {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.nav  .nav-btn  label  span {
+  display: block;
+  width: 25px;
+  height: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+.nav  .nav-links {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color:var(--white);
+  height: 0px;
+  transition: all 0.3s ease-in;
+  overflow-y: hidden;
+  top: 50px;
+  left: 0px;
+}
+.nav  .nav-links  a {
+  display: block;
+  width: 100%;
+  padding-left: 20px;
+}
+.nav  #nav-check:not(:checked) ~ .nav-links {
+  height: 0px;
+}
+.nav  #nav-check:checked ~ .nav-links {
+  height: 250px;
+  overflow-y: hidden;
+}
+}
+
+.attribute{
+position: absolute;
+bottom: 10px;
+}
+
+/* ///////////////////////////////////////////// */
+
+h2 {
+  color: var(--yellow);
+  margin-top: 3%;
+  margin-bottom: 12px;
+  
+}
+
+.about-container {
+  margin: 20px;
+  margin-top: 7%;
+  
+  padding: 40px;
+  background-color:var(--mn);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-container p{
+  color: rgba(255, 255, 255, 0.755);
+  font-size: 95%;
+}
+
+/* ////////////////////////////////////////////////// */
+.dash-container {
+  margin-top: 8%;
+  margin-right: 3%;
+  margin-left: 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.dashseb {
+  flex: 1;
+  padding: 50px;
+  border-radius: 6%;
+  background-color:var(--yellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inname {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bolder;
+}
+
+.invalue {
+  font-size: 24px;
+  /* font-weight: bold; */
+}
